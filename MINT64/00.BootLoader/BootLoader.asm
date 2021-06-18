@@ -3,6 +3,12 @@
 
 SECTION .text
 
+mov ax, 0xB800                          ; AX 레지스터에 0xB800 복사
+mov ds, ax                              ; DS 세그먼트 레지스터에 AX 레지스터의 값(0xB800)을 복사
+
+mov byte [0x00], 'M'                    ; DS 세그먼트:오프셋 0xB800:0x0000에 'M'을 복사
+mov byte [0x01], 0x4A                   ; DS 세그먼트:오프셋 0xB800:0x0001에 0x4A(빨간 배경에 밝은 녹색) 복사
+
 jmp $
 
 times 510 - ($ - $$)    db      0x00    ; $ : current line's address
