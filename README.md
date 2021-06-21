@@ -48,4 +48,13 @@ gcc++ -m64 -o test64 test.cpp
 sudo apt install nasm
 sudo apt install qemu-kvm
 ```
+### 프로젝트 실행 방법
 
+```
+# 프로젝트 빌드
+cd /MINT64
+make
+
+# qemu 실행
+qemu-system-x86_64 -m 64 -fda ./Disk.img -M pc
+```
