@@ -27,7 +27,8 @@ Disk.img: 00.BootLoader/BootLoader.bin 01.Kernel32/Kernel32.bin
 	@echo =============== Disk Image Build Start ===============
 	@echo
 
-	cat $^ > Disk.img
+	./ImageMaker.exe $^
+	chmod 777 ./Disk.img
 
 	@echo
 	@echo =============== All Build Complete ===============
@@ -37,4 +38,6 @@ clean:
 	make -C 00.BootLoader clean
 	make -C 01.Kernel32 clean
 	rm -f Disk.img
+	rm -f ImageMaker.exe
+
 	
