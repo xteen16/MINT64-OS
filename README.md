@@ -38,8 +38,8 @@ sudo apt-get install gcc-multilib g++-multilib binutils bison flex libc6-dev lib
 위와 같이 패키지 설치 후 간단한 `C, C++` 프로그램을 작성한 뒤 다음과 같이 크로스 컴파일 테스트를 진행합니다.
 
 ```
-gcc++ -m32 -o test32 test.cpp
-gcc++ -m64 -o test64 test.cpp
+gcc -m32 -o test32 test.cpp
+gcc -m64 -o test64 test.cpp
 ```
 
 다음으로 어셈블리 빌드를 위한 `NASM`과 OS를 emulation하기 위한 `QEMU`를 설치합니다.
