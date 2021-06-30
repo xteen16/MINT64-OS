@@ -58,3 +58,7 @@ make
 # qemu 실행
 qemu-system-x86_64 -m 64 -fda ./Disk.img -M pc
 ```
+### 주의사항
+
++ 프로잭트를 재 빌드할 때는 `make clean` 명령을 통해 기존 디스크 이미지를 삭제한 후 다시 빌드해야 합니다.
+
