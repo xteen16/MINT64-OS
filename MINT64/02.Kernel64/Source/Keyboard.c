@@ -248,7 +248,7 @@ void kReboot(void)
 static KEYBOARDMANAGER gs_stKeyboardManager = {0, };
 
 // 스캔 코드를 ASCII 코드로 변환하는 테이블
-static KEYMAPPINGENTRY gs_vstKeyMappingTable[KEY_MAPPINGTABLEMAXCOUT] = {
+static KEYMAPPINGENTRY gs_vstKeyMappingTable[KEY_MAPPINGTABLEMAXCOUNT] = {
     /* 0 */  { KEY_NONE ,       KEY_NONE       },
     /* 1 */  { KEY_ESC ,        KEY_ESC        },
     /* 2 */  { '1' ,            '!'            },
